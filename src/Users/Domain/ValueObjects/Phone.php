@@ -10,7 +10,7 @@ class Phone extends ValueObject
     protected function validate($value): void
     {
         if (!preg_match('/^[0-9]{10}$/', $value)) {
-            throw new PhoneException('Invalid phone number format', getenv('ERROR_PHONE'));
+            throw new PhoneException('Invalid phone number format, Format: 9999999999', getenv('ERROR_PHONE'));
         }
     }
 }
