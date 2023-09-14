@@ -16,12 +16,12 @@ class WalletEntity
     protected $name;
     protected $balance;
 
-    public function __construct(Uuid $uuid, Slug $slug, Name $name, Amount $balance)
+    public function __construct(Uuid $uuid, Slug $slug, Name $name)
     {
         $this->uuid = $uuid;
         $this->slug = $slug;
         $this->name = $name;
-        $this->balance = $balance;
+        $this->balance = new Amount(0);
     }
 
     public function getUuid(): Uuid
